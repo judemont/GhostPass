@@ -1,10 +1,10 @@
 name: ghostpass
 description: "A new Flutter project."
-publish_to: 'none'
-version: 0.1.0
+publish_to: "none"
+version: 1.1.0+100
 
 environment:
-  sdk: '>=3.3.4 <4.0.0'
+  sdk: ">=3.3.4 <4.0.0"
 
 dependencies:
   catppuccin_flutter: ^1.0.0

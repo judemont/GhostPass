@@ -24,7 +24,12 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      appBar: AppBar(
+        title: const Text("GhostPass"),
+      ),
+      resizeToAvoidBottomInset: false,
+      body: SingleChildScrollView(
+          child: Center(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
@@ -58,7 +63,6 @@ class _HomeState extends State<Home> {
                       siteDomainController.text,
                     );
                   });
-                  Fluttertoast.showToast(msg: "Password copied to clipboard");
                 },
                 child: const Text("Generate Password"),
               ),
@@ -71,6 +75,8 @@ class _HomeState extends State<Home> {
                         onPressed: () {
                           Clipboard.setData(
                               ClipboardData(text: resultPassword ?? ""));
+                          Fluttertoast.showToast(
+                              msg: "Password copied to clipboard");
                         },
                         child: const Text("Copy Password")),
                     const SizedBox(height: 20),
@@ -90,7 +96,7 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
-      ),
+      )),
     );
   }
 
