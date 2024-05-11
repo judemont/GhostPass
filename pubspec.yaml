@@ -1,7 +1,7 @@
 name: ghostpass
 description: "A new Flutter project."
 publish_to: "none"
-version: 1.1.0+100
+version: 1.0.1+101
 
 environment:
   sdk: ">=3.3.4 <4.0.0"
